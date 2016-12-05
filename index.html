@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+	//Printing stuff.
+	// window.alert("Annoying Alert Box");
+	// alert("Annoying Alert Box");
+	// console.log("this_ran");
+	// //console.dir 
+
+	// document.write("Hello, World");
+	// //window.document.write("Hello, world")
+
+	// // A dot followed by () is a method! (or function)
+	// // A dot not followed by () is a property
+
+	// var fullName = "Mason Mahaffey";
+	// fullName = "John Doe";
+
+	// //simple little prompt input with return logic
+
+	// var response = prompt("How many in your class: ");
+	// if (response == 16) {
+	// 	console.log("You were in the July class!");
+	// }
+	// else if(response == 15) {
+
+	// }
+	// else {
+	// 	console.log("conditional failed");
+	// }
+	var randomNumber = Math.floor(Math.random() * 10);
+	console.log(randomNumber);
+
+	var response = prompt("Guess a number between 1-10! You get two tries. ");
+	if (response == randomNumber) {
+		alert("You guessed right! Congratz.");
+	}
+	else if (response < randomNumber) {
+		alert("You're too low...");
+	}
+	else if (response > randomNumber) {
+		alert("You're too high...");
+	}
+	else {
+		alert("you gave a crazy number...")
+	}
+
+	if (response < randomNumber && randomNumber-response < 2) {
+		alert("You were within 2 of the number! Good try.");
+	}
+	else if (response > randomNumber && response-randomNumber < 2) {
+		alert("You were within 2 of the number! Good try.");
+	}
+	else {
+		console.log("");
+	}
+
+	if(response != randomNumber) {
+		alert("Nice job! ;o The answer was: " + randomNumber);
+	}
+
+
+
+</script>
+
+	<title>JS 101</title>
+	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+</head>
+<body>
+	
+</body>
+</html>
