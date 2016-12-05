@@ -30,44 +30,61 @@
 	// else {
 	// 	console.log("conditional failed");
 	// }
+
+	
+
+
 	var randomNumber = Math.floor(Math.random() * 10);
 	console.log(randomNumber);
 
-	var response = prompt("Guess a number between 1-10! You get two tries. ");
-	if (response == randomNumber) {
-		alert("You guessed right! Congratz.");
-	}
-	else if (response < randomNumber) {
-		alert("You're too low...");
-	}
-	else if (response > randomNumber) {
-		alert("You're too high...");
-	}
-	else {
-		alert("you gave a crazy number...")
+	function isEmpty(value){
+		return (value == null || value.length === 0);
 	}
 
-	if (response < randomNumber && randomNumber-response < 2) {
-		alert("You were within 2 of the number! Good try.");
-	}
-	else if (response > randomNumber && response-randomNumber < 2) {
-		alert("You were within 2 of the number! Good try.");
-	}
-	else {
-		console.log("");
-	}
+	var response = prompt("Guess a number between 1-10! You get two tries.");
 
-	if(response != randomNumber) {
-		alert("Nice job! ;o The answer was: " + randomNumber);
-	}
+
+
+		if (response == randomNumber) {
+			alert("You guessed right! Congratz.");
+			alert("Nice job! ;o The answer was: " + randomNumber);
+		}
+		else if (response < randomNumber) {
+			alert("You're too low...");
+			alert("Nice job! ;o The answer was: " + randomNumber);
+		}
+		else if (response > randomNumber) {
+			alert("You're too high...");
+			alert("Nice job! ;o The answer was: " + randomNumber);
+		}
+		else {
+			alert("you gave a crazy number... come on!")
+		}
+
+		if (response <= randomNumber && randomNumber-response <= 2) {
+			alert("You were within 2 of the number! Good try.");
+		}
+		else if (response >= randomNumber && response-randomNumber <= 2) {
+			alert("You were within 2 of the number! Good try.");
+		}
+		else {
+			console.log("");
+		}
+
+		// if(response != randomNumber) {
+		// 	alert("Nice job! ;o The answer was: " + randomNumber);
+		// }
+	
+
+
 
 
 
 </script>
 
 	<title>JS 101</title>
-	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css"> -->
 </head>
 <body>
 	
